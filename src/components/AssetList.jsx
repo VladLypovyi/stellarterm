@@ -4,6 +4,7 @@ import Driver from '../lib/Driver';
 import Loading from './Loading';
 import Ellipsis from './Ellipsis';
 import AssetListRows from './AssetListRows';
+import AssetListRowXlm from './AssetListRowXlm';
 import images from '../images';
 
 export default class AssetList extends React.Component {
@@ -85,6 +86,7 @@ export default class AssetList extends React.Component {
                     {this.generateRowTitle('Volume (24h)', 'volume24h')}
                     {this.generateRowTitle('Change (24h)', 'change24h')}
                 </div>
+                <AssetListRowXlm ticker={d.ticker} />
                 <AssetListRows ticker={d.ticker} limit={limit} sortBy={sortBy} sortType={sortType} />
             </div>
         );
